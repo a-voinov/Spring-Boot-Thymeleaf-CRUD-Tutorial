@@ -3,6 +3,9 @@ package com.tutorial.springboot.thymeleafdemo.dao;
 import com.tutorial.springboot.thymeleafdemo.entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
-    //that's it...
+
+    public List<Employee> findAllByOrderByLastNameAsc();
 }
